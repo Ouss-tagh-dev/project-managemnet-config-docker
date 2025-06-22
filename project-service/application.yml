@@ -7,8 +7,6 @@ spring:
   cloud:
     discovery:
       enabled: true
-    config:
-      uri: http://config-server:9296
   boot:
     admin:
       client:
@@ -34,8 +32,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
-  config:
-    import: optional:configserver:http://config-server:9296
 
 eureka:
   instance:

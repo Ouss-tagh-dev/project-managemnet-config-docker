@@ -7,8 +7,6 @@ spring:
   cloud:
     discovery:
       enabled: true
-    config:
-      uri: http://config-server:9296
   boot:
     admin:
       client:
@@ -40,8 +38,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://auth-service:8081
-  config:
-    import: optional:configserver:http://config-server:9296
 
 app:
   jwtSecret: a4NKDQPRJkhiHjan7thwv2TSJVAhnwgtUs5TjFI/VpWHebkFc2m1s+GqCaLl5Q/m8CmcMWDYMNzYOEwVvX4ccA==
@@ -83,6 +79,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://discovery-server:8761/eureka/
+      defaultZone: http://ouss:ouss@discovery-server:8761/eureka
     registry-fetch-interval-seconds: 30
     instance-info-replication-interval-seconds: 30
